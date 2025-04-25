@@ -1,0 +1,15 @@
+// Varibler-partial
+
+$header-footer-background: #CF0F47;
+$main-background: #000000;
+$mainLine-color: #FFDEDE;
+$hover-color: #FF0B55;
+$line-family: Arial, Helvetica, sans-serif;
+$line-size: 1.4em;
+$line-height: 1.3em;
+@mixin flexBox($justify, $align, $direction) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}

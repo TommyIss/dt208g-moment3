@@ -1,0 +1,119 @@
+@import "../../../variables";
+// Sidhuvud
+header {
+    background-color: $header-footer-background;
+    color: $main-background;
+    @include flexBox(space-around, center, row);
+    width: 100%;
+    padding: 2%;
+    border: 3px solid $hover-color;
+    color: $mainLine-color;
+}
+h1 {
+    a{
+        text-decoration: none;
+        color: $mainLine-color;
+        &:hover {
+            color: $main-background;
+            text-decoration: underline;
+        }
+    }
+}
+
+// Navigerings-meny
+#navlist {
+    list-style-type: none;
+    @include flexBox(space-evenly, center, row);
+    
+    li {
+        margin: 0 2%;
+    }
+    li a {
+        text-decoration: none;
+        color: $mainLine-color;
+        padding: 0 2%;
+        &:hover {
+            color: $main-background;
+            text-decoration: underline;
+        }
+    }
+    .actual-side {
+        color: $main-background;
+        text-decoration: underline;
+    }
+}
+
+// Dölj meny-knappar
+.menu-btn {
+    display: none;
+}
+
+
+
+// Stilsättningar för mindre skärmer
+@media screen and (max-width: 800px) {
+    
+    $line-size: 1em;
+
+    // meny-knappar i mobilläge
+    .menu-btn {
+        display: block;
+        background-color: $hover-color;
+        padding: 0.5%;
+        cursor: pointer;
+        .menu-icon {
+            @include flexBox(center, center, column);
+        }
+        .bars {
+            margin: 4% 0;
+            padding: 6% 30%;
+            background-color: $mainLine-color;
+        }
+        .menu-text {
+            color: $mainLine-color;
+        }
+        &:hover {
+            background-color: $main-background;
+        }
+    }
+
+    // Stäng-knapp
+    #close-btn {
+        align-self: flex-start;
+        margin: 0 2%;
+        .menu-icon {
+            margin: 20% 0;
+            
+        }
+        .cross1 {
+            transform: rotate(45deg);
+            margin-top: 20%;
+            top: 1%;
+        }
+        .cross2 {
+            transform: rotate(135deg);
+            margin-top: -18%;
+            top: 1%;
+        }
+        
+    }
+    
+    // Navigeringslista
+    #navlist {
+        @include flexBox(space-around, center, column);
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $header-footer-background;
+        width: 50vw;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    // Öppna och stänga menyn
+    #nav-menu {
+        display: none;
+        z-index: 3;
+    }
+
+}
