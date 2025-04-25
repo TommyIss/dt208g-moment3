@@ -1,1 +1,24 @@
-<p>convert works!</p>
+<h2>Konverterings sida</h2>
+
+<p>I denna sida kan du konvertera från meter till fot samt från celsius till fahrenheit och vice versa, genom att mata in värde på respektive inputsfält</p>
+
+<!-- Inmatningsformulär -->
+<div>
+    <label for="length">Längd i fot/meter: </label>
+    <input type="number" id="length" [(ngModel)]="length">
+    <br>
+    <label for="temp">Temperatur i celsius/fahrenheit: </label>
+    <input type="number" id="temp" [(ngModel)]="temp">
+</div>
+
+<div>
+    <p>Konevertera till: </p>
+    <button (click)="feetToMeter()">Meter</button>
+    <button (click)="meterToFeet()">Fot</button>
+    <button (click)="fahrenheitToCelsius()">Celsius</button>
+    <button (click)="celeciusToFahrenhei()">Fahrenheit</button>
+</div>
+
+<div>
+    <p>Resultat: {{ result + unit }}</p>
+</div>

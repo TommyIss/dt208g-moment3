@@ -21,11 +21,28 @@ main {
     margin: 2% 0;
     @include flexBox(center, center, column);
     width: 100%;
+    input {
+        margin: 1% 0;
+    }
 }
 
 // Maxbred för paragrafer
 p {
     max-width: 60ch;
+    margin: 1% 0;
+}
+
+// Knappar
+button {
+    margin: 1%;
+    padding: 1% 2%;
+    background-color: $header-footer-background;
+    color: $mainLine-color;
+    cursor: pointer;
+    &:hover {
+        background-color: $mainLine-color;
+        color: $hover-color;
+    }
 }
 
 // Stilsättningar för mindre skärmer
