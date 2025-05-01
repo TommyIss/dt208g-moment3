@@ -4,7 +4,7 @@
 
     <!-- Navigeringsmeny -->
      <!-- Öppna Knapp -->
-     <button class="menu-btn open" id="open-btn">
+     <button class="menu-btn open" id="open-btn" (click)="menuToggle()">
         <span class="menu-icon">
             <span class="bars"></span>
             <span class="bars"></span>
@@ -12,10 +12,10 @@
         </span>
         <span class="menu-text">Meny</span>
     </button>
-    <div id="nav-menu">
+    <div id="nav-menu" [style.display]="menuDisplay">
         <ul id="navlist">
             <!-- Stäng Knapp -->
-            <button class="menu-btn close" id="close-btn">
+            <button class="menu-btn close" id="close-btn" (click)="menuToggle()">
                 <span class="menu-icon">
                     <span class="bars cross1"></span>
                     <span class="bars cross2"></span>

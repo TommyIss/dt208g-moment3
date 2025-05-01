@@ -18,9 +18,10 @@ body {
 
 main {
     min-height: 400px;
-    margin: 2% 0;
+    margin: 2% auto;
     @include flexBox(center, center, column);
     width: 100%;
+    max-width: 1200px;
     input {
         margin: 1% 0;
     }

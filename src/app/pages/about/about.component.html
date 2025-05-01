@@ -1,1 +1,38 @@
-<p>about works!</p>
+<h2>Om uppgiften</h2>
+
+<picture>
+    <source [srcset]="imagePath1" type="image/avif">
+    <source [srcset]="imagePath2" type="image/webp">
+    <img [src]="imagePath" alt="Två personer som försöker att lösa en uppgift genom papper och sina dator">
+</picture>
+<h3>Arbetets beskrivning</h3>
+
+<p>
+    Arbetet påbörjade med att skapa ett nytt projekt och välja SCSS för stilssättning. Jag har skapade komponenter för semantiska element såsom header samt footer, och infogade dem i huvudfiler för HTML samt TypeScript av applikationen. Jag har skapat tre komponenter för undersidor, ”home” för startsida, ”about” för om uppgiftsida (denna sida), samt ”convert” för konverteringssida, och har infogat dem i app.routes.ts-fil samt länkad dem i navigeringsmeny i header-komponent.
+</p>
+
+<p>
+    För stilsättning har jag skapat en varibler-partial som innehåller SASS-variabler för layouts -färger, -typsnitt, och även mixin för flexBox.
+</p>
+
+<p>
+    I konverteringssida har jag skapat två inmatningsfält, det ena för längd och det andra för temperatur. Med hjälp av "ngModel" har jag kunnat binda data mellan inmatningsfält och komponenten. Sedan har jag skapat fyra knappar som är benämnda för enheten som man vill konvertera inmatade värde till. Med hjälp av event-bindninig kunde jag binda händelse från knappar till komponenten. I slutet har jag skapat en paragraf som innehåller resultatet, med hjälp av dubbla måsvingar har gått att koppla data som innehåller resultat från komponent till HTML-kod. På så sätt kunde jag skicka data från inmatningsfält till komponent, genom att klicka på en knapp skickas händelse som anropar önskade metoden i komponenten som hanterar i sin tur konvertera data, och slutligen skickas konverterade resultatet med respektive enheten tillbaka från komponenten och visas i paragrafen.
+</p>
+
+<p>
+    För navigeringsmeny har jag valt att använda ”routerLink”-attribut i stället för ”href” för att undvika ladda om hela sida när man navigera mellan sidorna och bara själva huvudinnehåll som ändras. Det har gått bra med att binda event mellan Öppna/Stäng -menyknappar och komponent genom event-binding ”(click)”. Med hjälp av property-binding [] har gått bra med att manipulera display-attribut i navigeringsmeny genom att skriva [style.display]=”menuDisplay”.
+</p>
+
+<h3>Slutsatser</h3>
+
+<p>
+    Har fått mycket goda kunskaper om arbete med Angular såsom att dela kod till respektive komponent eller element på så sätt kan man undvika att placera alla TypeScript-, SASS-, och HTML- kod i en och samma fil, utan arbetet blir mer strukturerat samt organiserat, och lättare att hitta kod som behövs.
+</p>
+
+<p>
+    Man behöver i vanlig JavaScript-fil kontrollera vilken HTML-fil skall vissa funktioner samt eventlyssnare skall gälla eller inte, annars får man felmeddelande om element med respektive eventlyssnare inte finns, men detta problem är löst i Angular genom koddelning i respektive komponenter.
+</p>
+
+<p>
+    Data-binding är mycket användbar metod som bidrar till att skicka data från HTML-kod, samt -attribut till komponenten och skicka tillbaka behandlade data till HTML, vilket möjliggör att skicka inmatade data, få resultat tillbaka, lättare att DOM-manipulera html-attribut, koppla händelse samt metoder direkt i html-kod.
+</p>
