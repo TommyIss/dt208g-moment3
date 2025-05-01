@@ -26,18 +26,19 @@ h1 {
     @include flexBox(space-evenly, center, row);
     
     li {
-        margin: 0 2%;
+        margin: 0 4%;
     }
     li a {
         text-decoration: none;
         color: $mainLine-color;
         padding: 0 2%;
+        white-space: nowrap;
         &:hover {
             color: $main-background;
             text-decoration: underline;
         }
     }
-    .actual-side {
+    li .actual-side {
         color: $main-background;
         text-decoration: underline;
     }

@@ -17,13 +17,17 @@ body {
 }
 
 main {
-    min-height: 400px;
+    min-height: 300px;
     margin: 2% auto;
-    @include flexBox(center, center, column);
+    padding: 0 2%;
+    // @include flexBox(center, center, column);
     width: 100%;
-    max-width: 1200px;
+    max-width: 800px;
     input {
         margin: 1% 0;
+    }
+    h3 {
+        margin: 2% 0;
     }
 }
 
@@ -49,7 +53,7 @@ button {
 // Stilsättningar för mindre skärmer
 @media screen and (max-width: 800px) {
     
-    $line-size: 1em;
+    $line-size: 0.9em;
     body {
         font-size: $line-size;
     }

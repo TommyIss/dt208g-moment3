@@ -44,7 +44,7 @@ export class HeaderComponent {
       this.updateMenuDisplay(event.matches);
     });
 
-    document.addEventListener('click', this.closeMenuOnClickOutside.bind(this));
+    
   }
 
   // Öppna/ stänga menu
@@ -59,15 +59,5 @@ export class HeaderComponent {
     }
   }
 
-  // Stäng menyn när man klickar utanför
-  closeMenuOnClickOutside(event: MouseEvent): void {
-    let target = event.target as HTMLElement;
-    let navMenuEl = document.getElementById('nav-menu') as HTMLDivElement;
-
-    //console.log(target);
-    if(navMenuEl && !navMenuEl.contains(target)) {
-      this.menuDisplay = 'none';
-    }
-  }
 }
 
